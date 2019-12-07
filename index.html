@@ -1,0 +1,331 @@
+<!-- TODO:
+
+resarch personal trainer designs for contact page
+
+setup logic for secret page
+
+ -->
+<html>
+	<head>
+		<title>MB Training</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<style>
+
+		/*watty site*/
+		#music-section{
+			background: url('./watty.png') no-repeat;
+   			background-size: 100%;		
+		}
+		audio{
+			width: 246px;
+			height: 30px;			
+		}
+		audio:focus {
+   			outline: none;
+		}
+		.watty-parallax {
+			/* The image used */
+			background-image: url('watty.png');
+
+			/* Full height */
+			height: 100%; 
+
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		/*GLOBAL*/
+		body{
+			background-color: #2e3732;
+		}
+		.section{
+			height: 100%;
+		}
+
+
+		/*HOME*/
+		#home-section{
+/*			background: url('./cover1.jpg') no-repeat;
+   			background-size: 100%;*/			
+		}
+		#header-nav{
+			height: 20%;
+			background-color: #2e3732;
+		}
+		#banner-title{
+			text-align: center;
+		}
+		#name-title{
+			font-family: futura-pt;
+			/*border: white 1px solid;*/
+			font-size: 49px;
+			font-family: Arial, Helvetica, sans-serif;
+			letter-spacing: 1px;
+			font-weight: 700;
+			color: #ffffff;
+			margin: 0px;
+			padding: 0px;			
+		}
+		#under-title{
+			/*border-bottom: white 1px solid;*/
+			font-weight: 700;
+			color:#ff0000;
+			font-size: 22px;
+			letter-spacing: 5px;
+			margin: 0px;
+			margin-top: -12px;
+			padding: 0px;
+		}
+		#home-banner{
+			color: white;
+			font-family: Arial,Helvetica,sans-serif;
+			/*font-family: bebas-neue;*/
+		    font-weight: 400;
+		    font-style: normal;
+		    font-size: 75px;
+		    letter-spacing: 0em;			
+		}
+		.banner-btns{
+			float: left;
+			cursor: pointer;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-left: 5px;
+			padding-right: 5px;
+			font-size: 12px;
+		    font-family: futura-pt;
+		    font-weight: 600;
+		    font-style: normal;
+		    letter-spacing: .1em;
+		    text-transform: uppercase;			
+		}
+		.banner-btn3{
+			color: #ff0000;
+		}
+		.banner-btn3:hover{
+			color: #ffffff;
+		}
+		.contact-labels{
+			color: #ffffff;
+		}
+
+
+
+		/*ABOUT ME*/
+		#abtme-section{
+
+		}
+		#abtme-text-col{
+			color: white;
+		}
+
+		/*CONTACT*/
+		#contact-section{
+			background-color: #2e3732;
+/*			text-align: center;*/
+		}
+		#contact-top{
+			padding-top: 45%;
+		}
+		#email-contact-row{
+			height: 25%;
+		}
+		#name-input{
+			width: 100%;
+		}
+		#email-title{
+			height: 25%;
+		}
+		#email-input{
+			width: 100%;
+			height: 25%;
+		}
+		#details-input{
+			width: 100%;
+			height: 100px;
+		}
+		#submit-btn{
+			margin: 10px 10px 10px 0px;
+		}		
+
+
+	/*
+	media query the f out of this
+
+
+	can you use percents?
+	*/
+	.shape {
+	    stroke-dasharray: 140 540;
+	    stroke-dashoffset: -474;
+	    stroke-width: 4px;
+	    fill: transparent;
+	    stroke: #ff0000;
+	    transition: stroke-width 1.25s, stroke-dashoffset 1.25s, stroke-dasharray 1.25s;
+	}
+	.text {
+		text-align: center;
+	    font-family: sans-serif;
+	    font-size: 14px;
+	    line-height: 32px;
+	/*    letter-spacing: 0px;*/
+	    color: #ffffff;
+		top: -36px;
+	    position: relative;
+	}
+	.svg-wrapper:hover .shape {
+	    stroke-width: 4px;
+	    stroke-dashoffset: 0;
+	    stroke-dasharray: 760;
+	}
+
+	#home-parallax{
+		/* The image used */
+		background-image: url('./cover1.jpg');
+
+		/* Full height */
+		height: 80%; 
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		top: 50px;
+	}
+
+
+	</style>
+	<body>
+		<div id="full-site" class="container-fluid">
+			<div id="home-section" class="row section">
+				<div class="col-lg-12">
+					<div id="header-nav" class="row">
+						<div class="col-lg-4">
+							<div id="banner-title">
+								<h3 id="name-title">MB TRAINING</h3>
+								<h5 id="under-title">Performance & Nutrition</h5>
+							</div>
+						</div>						
+						<div class="col-lg-8">
+							<div class="banner-btns" data-id="0">
+								<div class="svg-wrapper">
+								    <svg height="40" width="65">
+								        <rect class="shape" height="40" width="65" />
+								        <div class="text">HOME</div>
+								    </svg>
+								</div>
+							</div>
+							<div class="banner-btns" data-id="1">
+								<div class="svg-wrapper">
+								    <svg height="40" width="100">
+								        <rect class="shape" height="40" width="100" />
+								        <div class="text">ABOUT ME</div>
+								    </svg>
+								</div>
+							</div>
+							<div class="banner-btns" data-id="2">
+								<div class="svg-wrapper">
+								    <svg height="40" width="125">
+								        <rect class="shape" height="40" width="125" />
+								        <div class="text">MY SERVICES</div>
+								    </svg>
+								</div>
+							</div>	
+		<!-- 					<div class="banner-btns banner-btn2" data-id="5">
+								<div class="svg-wrapper">
+								    <svg height="40" width="100">
+								        <rect class="shape" height="40" width="100" />
+								        <div class="text">Contact</div>
+								    </svg>
+								</div>
+							</div> -->								
+							<div class="banner-btns" data-id="3">
+								<div class="svg-wrapper">
+								    <svg height="40" width="175">
+								        <rect class="shape" height="40" width="175" />
+								        <div class="text">TRANSFORMATIONS</div>
+								    </svg>
+								</div>
+							</div>
+							<div class="banner-btns" data-id="4">						
+								<div class="svg-wrapper">
+								    <svg height="40" width="115">
+								        <rect class="shape" height="40" width="115" />
+								        <div class="text">NUTRITION</div>
+								    </svg>
+								</div>						
+							</div>
+						</div>						
+					</div>
+					<div id="home-parallax" class="row">
+						<div class="col-lg-2"></div>
+						<div id="home-banner" class="col-lg-8">PERSONAL TRAINER & NUTRITIONAL COACHING</div>
+					</div>
+				</div>		
+			</div>
+
+			<div id="abtme-section" class="row section">
+				<div class="col-lg-12">
+					<div class="row">
+
+							<div id="abtme-text-col" class="col-lg-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="col-lg-6">
+								<div style="width: 250px; height: 250px; background-color: white;"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="row section">
+				MY SERVICES
+			</div>
+			<div class="row section">
+				TRANSFORMATIONS
+			</div>
+			<div class="row section">
+				NUTRITION
+			</div>
+			<div id="contact-section" class="row section">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">
+					<div id="contact-top" class="row">
+						<div class="contact-labels col-lg-12">NAME:</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12"><input id="name-input" type="text" name="name"></div>
+					</div>					
+					<div class="row">
+						<div id="email-title" class="contact-labels col-lg-2">EMAIL:</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12"><input id="email-input" type="text" name="email"></div>
+					</div>															
+					<div id="details" class="row">
+						<div class="col-lg-12 contact-labels">DETAILS:</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<textarea id="details-input"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<button class="btn btn-light" id="submit-btn">Submit</button>
+						</div>
+					</div>		
+				</div>
+				<div class="col-lg-4"></div>
+			</div>									
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
