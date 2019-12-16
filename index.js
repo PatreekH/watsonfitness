@@ -18,82 +18,40 @@ var musicPage = '<div id="music-section" class="row section">'+
 '				</div>		'+
 '			</div>';
 
-var mainPage = '<div id="home-section" class="row section">'+
-'				<div class="col-lg-4">'+
-'					<div class="banner-btns banner-btn1">TRANSFORMATIONS</div>'+
-'					<div class="banner-btns banner-btn2">NUTRITION</div>'+
-'				</div>'+
-'				<div class="col-lg-4">'+
-'					<div id="banner-title">'+
-'						<h3 id="name-title">Marcus Watson</h3>'+
-'						<h5 id="under-title">Performance & Nutrition</h5>'+
-'					</div>'+
-'				</div>'+
-'				<div class="col-lg-4">'+
-'					<div class="banner-btns banner-btn2">MY SERVICES</div>'+
-'					<div class="banner-btns banner-btn2">ABOUT ME</div>'+
-'					<div class="banner-btns banner-btn2">CONTACT</div>'+
-'				</div>		'+
-'			</div>'+
-'			<div class="row section">'+
-'				ABOUT ME'+
-'			</div>'+
-'			<div class="row section">'+
-'				MY SERVICES'+
-'			</div>'+
-'			<div class="row section">'+
-'				TRANSFORMATIONS'+
-'			</div>'+
-'			<div class="row section">'+
-'				NUTRITION'+
-'			</div>'+
-'			<div id="contact-section" class="row section">'+
-'				<div class="col-lg-4"></div>'+
-'				<div class="col-lg-4">'+
-'					<div class="row">'+
-'						<div class="col-lg-12">NAME:</div>'+
-'					</div>'+
-'					<div class="row">'+
-'						<div class="col-lg-12"><input id="name-input" type="text" name="name"></div>'+
-'					</div>					'+
-'					<div class="row">'+
-'						<div id="email-title" class="col-lg-2">EMAIL:</div>'+
-'					</div>'+
-'					<div class="row">'+
-'						<div class="col-lg-12"><input id="email-input" type="text" name="email"></div>'+
-'					</div>															'+
-'					<div id="details" class="row">'+
-'						<div class="col-lg-12">DETAILS:</div>'+
-'					</div>'+
-'					<div class="row">'+
-'						<div class="col-lg-12">'+
-'							<textarea id="details-input"></textarea>'+				
-						'</div>'+
-					'</div>'+
-'					<div class="row">'+
-'						<div class="col-lg-12">'+
-'							<button id="submit-btn">Submit</button>'+
-'						</div>'+
-'					</div>		'+
-'				</div>'+
-'				<div class="col-lg-4"></div>'+
-'			</div>';
-
 var currentHeight;
 
 $(document).ready(function(){
 	currentHeight = window.innerHeight;
+
 });
 
+var contactReason = 'Free Consultation';
+var methOfContact = 'In Person'; 
+var apptTime = '7:00am';
+var apptLocation = 'Fitness CF';
 
-$('#full-site').on('click', '#submit-btn', function(){
-	var name = $('#name-input').val();
+$("form").submit(function(e){
+	e.preventDefault();
+
+	var first = $('#firstname-input').val();
+	var last = $('#lastname-input').val();
+
 	var email = $('#email-input').val();
+	//reason == contactReason
+	// meth of contact methOfContact = 
+	var date = $('.datepicker').val();
+	//var apptTime
+	//apptLoc
+	if(apptLocation == 'Fitness CF'){
+		var apptAddress = '1714 US Highway 27 Clermont, FL 34714';
+	} else if(apptLocation == 'Other'){
+		var apptAddress = $('#meetup-address').val();
+	} else {
+		var apptAddress = 'None';
+	}
+	var phoneNum = $('#phone-input').val();
 	var details = $('#details-input').val();
 
-	console.log(name);
-	console.log(email);
-	console.log(details);
 
 	if(name == 'music' && email == '' && details == ''){
 		
@@ -101,16 +59,44 @@ $('#full-site').on('click', '#submit-btn', function(){
 
 		if(password == 'watty'){
 			$('#full-site').html(musicPage);
-			$('#full-site').prepend('<div class="watty-parallax"><button>IF UR BORED AND READING THIS, CLICK ME!</button></div>');
 		} else {
 			alert(':(');
 		};
 
 	} else {
+
+
+		//create validation
+
+		var contactForm = {
+			first: first,
+			last: last,
+			email: email,
+			reason: contactReason,
+			methOfContact: methOfContact,
+			apptTime: apptTime,
+			apptLocation: apptLocation,
+			apptAddress: apptAddress,
+			phoneNum: phoneNum,
+			details: details
+		};
+
+		console.log(contactForm);
+
+
+
 		// *require things here, alert if empty
-	}
+
+		// ajax call
+
+		// loading screen while awaiting response
+
+		//refresh page after submission?
+
+	};
 
 });
+
 
 $('#full-site').on('click', '#return-site-btn', function(){
 
@@ -131,3 +117,108 @@ $('#full-site').on('click', '.banner-btns', function(){
     }, 800);	
 
 });
+
+
+//CHANGE THIS TO dropdown-item on CLICK
+$('#full-site').on('click', '.dropdown-item', function(){
+
+	if($(this).attr("data-type") == 'time'){
+
+		apptTime = $(this).attr("data-id");
+		$('#time-label').html($(this).attr("data-id"));
+
+	} else if($(this).attr("data-type") == 'reason'){
+
+	    if ($(this).attr("data-id") == 'consult'){
+
+	    	$('#phone-label').removeClass('phone-spacing');
+
+	    	methOfContact = 'In Person';
+	    	contactReason = 'Free Consultation';
+
+	    	$('#reason-label').html('Free Consultation');
+	        $('#extra-space1').html(freeConsultSelected);
+
+	    } else if($(this).attr("data-id") == 'sched'){
+
+	    	$('#phone-label').removeClass('phone-spacing');
+
+	    	methOfContact = 'In Person';
+	    	contactReason = 'Schedule Workout';
+
+	    	$('#reason-label').html('Schedule Workout');
+	    	$('#extra-space1').html(scheduleSelected);
+
+	    } else {
+
+	    	methOfContact = 'Over Phone';
+	    	contactReason = 'Other';
+
+	    	$('#phone-label').addClass('phone-spacing');
+
+	    	$('#reason-label').html('Other');
+	        $('#extra-space1').empty();
+
+	    };
+
+    	$('.datepicker').datepicker(options);
+
+	};
+
+});
+
+$('#full-site').on('click', '#in-per', function(){
+
+	if($('#in-per').is(':checked')) {
+
+		methOfContact = 'In Person';
+		$('#extra-space2').html(locationInput);
+
+	};
+});
+
+$('#full-site').on('click', '#ovr-pho', function(){
+
+	if($('#ovr-pho').is(':checked')) {
+
+		methOfContact = 'Over Phone';
+		apptLocation = 'None';
+		$('#extra-space2').empty();
+
+	};
+});
+
+$('#full-site').on('click', '#my-gym', function(){
+
+	if($('#my-gym').is(':checked')) {
+
+		apptLocation = 'Fitness CF';
+		$('#meetup-address-col').html('<a href="https://goo.gl/maps/gU8nXEFHxjUyBtcW6">1714 US Highway 27 Clermont, FL 34714</a>');
+
+	};
+
+});
+
+$('#full-site').on('click', '#other-gym', function(){
+
+	if($('#other-gym').is(':checked')) {
+
+		apptLocation = 'Other';
+		$('#meetup-address-col').html('<input id="meetup-address" class="form-control" placeholder="1234 street city, state zip" type="text" name="meetupAddress" required>');
+
+	};
+
+});
+
+// <!-- have min be today -->
+var options={
+        format: 'mm/dd/yyyy',
+        todayHighlight: true,
+        autoclose: true
+      };
+
+//initalizes datepicker
+$('.datepicker').datepicker(options);
+
+
+AOS.init();
