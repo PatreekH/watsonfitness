@@ -22,6 +22,8 @@ var currentHeight;
 
 $(document).ready(function(){
 	currentHeight = window.innerHeight;
+	$('#home-parallax').css('height',  window.innerHeight-60);
+
 
 });
 
@@ -108,15 +110,63 @@ $('#full-site').on('click', '#return-site-btn', function(){
 $('#full-site').on('click', '.banner-btns', function(){
 
 	var section = parseInt($(this).attr("data-id"));
-	var scroll; 
 
-	scroll = currentHeight*section;
+	window.scrollTo(0, 0);
 
-    $('html,body').animate({
-        scrollTop: scroll
-    }, 800);	
+	if(section == '0'){ //home
+
+		$('#site-body').html(homePage+abtmePage);
+
+	} else if(section == '1'){ //about me
+
+		$('#site-body').html(homePage+abtmePage);
+		$("body,html").animate({
+			scrollTop: window.innerHeight-40
+		}, 800);
+
+	} else if(section == '2'){ //my services
+
+		$('#site-body').html(servPage);
+
+	} else if(section == '3'){ //free consult
+
+		loadContactPage();
+
+	} else if(section == '4'){ //nutrition
+
+		$('#site-body').html(nutPage);
+
+	} else if(section == '5'){ //contact me
+
+		loadContactPage();
+		$("body,html").animate({
+			scrollTop: "600px"
+		}, 800);		
+
+	}
+
+	$('#home-parallax').css('height',  window.innerHeight-60);
+
+	var rellax = new Rellax('.rellax');
 
 });
+
+$('#full-site').on('click', '.sched-btn, #footer-consult-btn', function(){
+
+	loadContactPage();
+
+});
+
+function loadContactPage(){
+
+	window.scrollTo(0, 0);
+
+	$('#site-body').html(consultPage+contactPage);
+
+	//initalizes datepicker
+	$('.datepicker').datepicker(options);
+
+}
 
 
 //CHANGE THIS TO dropdown-item on CLICK
@@ -210,15 +260,25 @@ $('#full-site').on('click', '#other-gym', function(){
 
 });
 
+$('#full-site').on('click', '#menu-btn', function(){
+
+	openMenu(this);
+
+});
+
+function openMenu(x) {
+
+  x.classList.toggle("change");
+  $('#banner-btn-container').css("display", "block");
+
+}
+
 // <!-- have min be today -->
 var options={
         format: 'mm/dd/yyyy',
         todayHighlight: true,
         autoclose: true
       };
-
-//initalizes datepicker
-$('.datepicker').datepicker(options);
 
 
 AOS.init();
