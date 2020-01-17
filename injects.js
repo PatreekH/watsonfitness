@@ -1,3 +1,57 @@
+var musicPage = '<div id="music-section" class="row section">'+
+'					<div class="col-lg-12">'+
+'						<div id="music-banner" class="row">'+
+'							<div class="col-lg-12">'+
+'								<div id="return-site-btn" class="">Return to Site</div>	'+
+'							</div>'+
+'						</div>'+
+'						<div id="music-content" class="row">'+
+'							<div class="col-lg-12">'+
+'								<div id="songs" class="row">'+
+'									<div class="col-lg-4">'+
+'										<p>Lost two</p>'+
+'										<audio src="./songs/lost 2.wav" controls><source src="./lost2.wav" type="audio/wav">Your browser does not support the audio element.</audio>'+
+'									</div>'+
+'									<div class="col-lg-4"></div>'+
+'									<div class="col-lg-4">'+
+'										<p>relapse feat. MW</p>'+
+'										<audio src="./songs/relapse.wav" controls><source src="./songs/relapse.wav" type="audio/wav">Your browser does not support the audio element.</audio>'+
+'									</div>'+
+'								</div>'+
+'								<div class="row">'+
+'									<div class="col-lg-4">'+
+'										<p>it aint real</p>'+
+'										<audio src="./songs/it aint real.wav" controls><source src="./songs/it aint real.wav" type="audio/wav">Your browser does not support the audio element.</audio>		'+
+'									</div>			'+
+'									<div class="col-lg-4"></div>'+
+'									<div class="col-lg-4">'+
+'										<p>club fall</p>'+
+'										<audio src="./songs/club fall.wav" controls><source src="./songs/club fall.wav" type="audio/wav">Your browser does not support the audio element.</audio>'+
+'									</div>'+
+'								</div>	'+
+'								<div class="row">'+
+'									<div class="col-lg-4">'+
+'										<p>both of u$</p>'+
+'										<audio src="./songs/both of u$.wav" controls><source src="./songs/both of u$.wav" type="audio/wav">Your browser does not support the audio element.</audio>'+
+'									</div>'+
+'									<div class="col-lg-4"></div>'+
+'									<div class="col-lg-4">'+
+'										<p>to ur dreams</p>'+
+'										<audio src="./songs/to ur dreams.wav" controls><source src="./songs/to ur dreams.wav" type="audio/wav">Your browser does not support the audio element.</audio>		'+
+'									</div>'+
+'								</div>'+
+'								<div class="row">'+
+'									<div class="col-lg-4">'+
+'										<p>backseat</p>'+
+'										<audio src="./songs/backseat.wav" controls><source src="./songs/backseat.wav" type="audio/wav">Your browser does not support the audio element.</audio></div>'+
+'									<div class="col-lg-4"></div>'+
+'									<div class="col-lg-4"></div>'+
+'								</div>'+
+'							</div>'+
+'						</div>'+
+'					</div>'+
+'				</div>';
+
 var freeConsultSelected = '		<div class="row">'+
 '									<div class="contact-labels col-lg-12">PREFERED METHOD FOR THE CONSULTATION:</div>'+
 '								</div>'+
@@ -411,13 +465,15 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '				<div class="col-lg-1"></div>'+
 '			</div>';
 
-var homePage = '<div id="home-section" class="row section">'+
+var homePage =  '<div id="home-section" class="row section">'+
 '						<div class="col-lg-12">'+
 '							<div id="home-parallax" class="row">'+
 '								<div class="col-lg-1"></div>'+
 '								<div id="home-banner" class="col-lg-10">'+
-'									<div id="home-banner-name">MARCUS BLAINE</div>'+
-'									<div id="home-sub-banner">PERSONAL TRAINER <span class="red-text">&</span> NUTRITIONAL COACHING</div>'+
+'									<div id="home-banner-name">'+
+'										<span class="music-btn" data-id="m">M</span>AR<span class="music-btn" data-id="c">C</span><span class="music-btn" data-id="u">U</span><span class="music-btn" data-id="s">S</span> BLA<span class="music-btn" data-id="i">I</span>NE'+
+'									</div>'+
+'									<div id="home-sub-banner">PERSONAL TRAINER <span class="red-text">&</span><br id="banner-br"> NUTRITIONAL COACHING</div>'+
 '									<button class="btn btn-danger sched-btn free-con-btn">SCHEDULE FREE CONSULTATION</button>'+
 '								</div>'+
 '								<div class="col-lg-1"></div>'+
@@ -425,8 +481,6 @@ var homePage = '<div id="home-section" class="row section">'+
 '						</div>'+
 '					</div>';
 	
-
-
 var abtmePage = '<div id="abtme-section" class="row section">'+
 '						<div class="col-lg-12">'+
 '							<div class="row">'+

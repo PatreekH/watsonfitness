@@ -1,21 +1,3 @@
-var musicPage = '<div id="music-section" class="row section">'+
-'				<div class="col-lg-4">'+
-'					<div id="return-site-btn" class="banner-btns banner-btn3">Return to Site</div>'+
-'					<p>Lost2</p><audio src="lost2.wav" controls><source src="./lost2.wav" type="audio/wav">Your browser does not support the audio element.</audio>'+
-'				</div>'+
-'				<div class="col-lg-4">'+
-'					<div id="banner-title">'+
-'						<h3 id="name-title">Watty</h3>'+
-'						<h5 id="under-title">Rapper</h5>'+
-'					</div>'+
-'				</div>'+
-'				<div class="col-lg-4">'+
-'					<div class="banner-btns banner-btn3">Nightrider</div>'+
-'					<div class="banner-btns banner-btn3">in the xone</div>'+
-'					<div class="banner-btns banner-btn3">Songs that no one sings</div>'+
-'					<div class="banner-btns banner-btn3">How did I end up here without you</div>'+
-'				</div>		'+
-'			</div>';
 var currentHeight;
 var contactReason = 'Free Consultation';
 var methOfContact = 'In Person'; 
@@ -32,13 +14,20 @@ $('#full-site').on('click', '.music-btn', function(){
 	if(password == 'music'){
 		var pw = prompt('password?');
 		if(pw == 'watty'){
-			$('#full-site').html(musicPage);
+			$('#site-body').html(musicPage);
+			$('#mobile-nav-fixed').css("display", "none");
+			$('#footer-section').css("display", "none");
+			$('#site-body').css("paddingTop", "0px");
 		} else {
 			alert(':(');
 		};	
 	};
 });
+
 $('#full-site').on('click', '#return-site-btn', function(){
+	$('#mobile-nav-fixed').css("display", "block");
+	$('#footer-section').css("display", "block");
+	$('#site-body').css("paddingTop", "60px");
 	$(window).scrollTop(0);
 	$('#site-body').html(homePage+abtmePage);
 	$('#home-parallax').css('height',  window.innerHeight-60);

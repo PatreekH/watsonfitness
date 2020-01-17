@@ -521,7 +521,7 @@
 		}
 		#music-content p{
 			margin-bottom: 0px;
-			margin-top: 10px;
+			margin-top: 20px;
 			color: red;
 			font-weight: 700;
 			letter-spacing: 5px;
@@ -794,6 +794,10 @@
 	#footer-consult-btn{
 		font-size: 21px;
 	}
+
+	#songs {
+	     margin-top: 0px; 
+	}	
 
 }
 
