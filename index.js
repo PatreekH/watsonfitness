@@ -16,18 +16,25 @@ $('#full-site').on('click', '.music-btn', function(){
 		if(pw == 'watty'){
 			$('#site-body').html(musicPage);
 			$('#mobile-nav-fixed').css("display", "none");
+			$('#header-nav-fixed').css("display", "none");
 			$('#footer-section').css("display", "none");
 			$('#site-body').css("paddingTop", "0px");
+			$('#full-site').css("height", "100%");
+			$('#site-body').css("height", "100%");
+			$('#site-body-row').css("height", "100%");
 		} else {
 			alert(':(');
 		};	
 	};
 });
-
 $('#full-site').on('click', '#return-site-btn', function(){
 	$('#mobile-nav-fixed').css("display", "block");
 	$('#footer-section').css("display", "block");
+	$('#header-nav-fixed').css("display", "block");
 	$('#site-body').css("paddingTop", "60px");
+	$('#full-site').css("height", "auto");
+	$('#site-body').css("height", "auto");
+	$('#site-body-row').css("height", "auto");	
 	$(window).scrollTop(0);
 	$('#site-body').html(homePage+abtmePage);
 	$('#home-parallax').css('height',  window.innerHeight-60);
