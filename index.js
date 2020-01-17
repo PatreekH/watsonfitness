@@ -25,6 +25,24 @@ $(document).ready(function(){
 	currentHeight = window.innerHeight;
 	$('#home-parallax').css('height',  window.innerHeight-60);
 });
+var password = '';
+$('#full-site').on('click', '.music-btn', function(){
+	var letter = $(this).attr("data-id");
+	password+=letter;
+	if(password == 'music'){
+		var pw = prompt('password?');
+		if(pw == 'watty'){
+			$('#full-site').html(musicPage);
+		} else {
+			alert(':(');
+		};	
+	};
+});
+$('#full-site').on('click', '#return-site-btn', function(){
+	$(window).scrollTop(0);
+	$('#site-body').html(homePage+abtmePage);
+	$('#home-parallax').css('height',  window.innerHeight-60);
+});
 $("form").submit(function(e){
 	e.preventDefault();
 	var first = $('#firstname-input').val();
@@ -40,47 +58,38 @@ $("form").submit(function(e){
 	};
 	var phoneNum = $('#phone-input').val();
 	var details = $('#details-input').val();
-	if(first == 'music' && email == '' && details == ''){
-		var password = prompt('password');
-		if(password == 'watty'){
-			$('#full-site').html(musicPage);
-		} else {
-			alert(':(');
-		};
-	} else {
 
-		//create validation
-		var contactForm = {
-			first: first,
-			last: last,
-			email: email,
-			reason: contactReason,
-			methOfContact: methOfContact,
-			apptTime: apptTime,
-			apptLocation: apptLocation,
-			apptAddress: apptAddress,
-			phoneNum: phoneNum,
-			details: details
-		};
 
-		console.log(contactForm);
-
-		// *require things here, alert if empty
-
-		// ajax call
-
-		// loading screen while awaiting response
-
-		//refresh page after submission?
+	//create validation
+	var contactForm = {
+		first: first,
+		last: last,
+		email: email,
+		reason: contactReason,
+		methOfContact: methOfContact,
+		apptTime: apptTime,
+		apptLocation: apptLocation,
+		apptAddress: apptAddress,
+		phoneNum: phoneNum,
+		details: details
 	};
-});
-$('#full-site').on('click', '#return-site-btn', function(){
-	$('#full-site').html(mainPage);
+
+	console.log(contactForm);
+
+	// *require things here, alert if empty
+
+	// ajax call
+
+	// loading screen while awaiting response
+
+	//refresh page after submission?
+
+
 });
 $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', function(){
 	var section = parseInt($(this).attr("data-id"));
+	password = '';
 	$(window).scrollTop(0);
-	// window.scrollTo(0, 0);
 	if(section == '0'){ //home
 		$(window).scrollTop(0);
 		$('#site-body').html(homePage+abtmePage);
@@ -101,7 +110,7 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 	};
 	if(menuStatus){
 		$('.change').removeClass('change');
-		menuStatus = false;
+		menuStatus = false
 		$('.side-nav').animate({left: "-75%"});
 		$('#site-body-row').css("opacity", "1");
 	};
@@ -109,6 +118,7 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 	var rellax = new Rellax('.rellax');
 });
 $('#full-site').on('click', '.sched-btn, #footer-consult-btn', function(){
+	password = '';
 	loadContactPage();
 	scrollContact();
 });
@@ -124,7 +134,7 @@ function scrollContact(){
 		$('html,body').animate({
         	scrollTop: consultHeight+40
     	});
-	}, 100);	
+	}, 120);	
 }
 $('#full-site').on('click', '.dropdown-item', function(){
 	if($(this).attr("data-type") == 'time'){
@@ -184,13 +194,14 @@ $('#full-site').on('click', '#menu-btn', function(){
 });
 var menuStatus = false;
 function openMenu(x) {
+	password = '';
 	x.classList.toggle("change");
 	if(menuStatus == false){
 		menuStatus = true;
 		$('.side-nav').animate({left: '0px'});
 		$('#site-body-row').css('opacity', '0.25');
 	} else {
-		menuStatus = false;
+		menuStatus = false
 		$('.side-nav').animate({left: '-75%'});
 		$('#site-body-row').css('opacity', '1');
 	}
