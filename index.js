@@ -16,7 +16,7 @@ $('#full-site').on('click', '.music-btn', function(){
 		if(pw == 'watty'){
 			$('#site-body').html(musicPage);
 			$('#mobile-nav-fixed').css("display", "none");
-			$('#header-nav-fixed').css("display", "none");
+			// $('#header-nav-fixed').css("display", "none");
 			$('#footer-section').css("display", "none");
 			$('#site-body').css("paddingTop", "0px");
 			$('#full-site').css("height", "100%");
@@ -30,7 +30,7 @@ $('#full-site').on('click', '.music-btn', function(){
 $('#full-site').on('click', '#return-site-btn', function(){
 	$('#mobile-nav-fixed').css("display", "block");
 	$('#footer-section').css("display", "block");
-	$('#header-nav-fixed').css("display", "block");
+	// $('#header-nav-fixed').css("display", "block");
 	$('#site-body').css("paddingTop", "60px");
 	$('#full-site').css("height", "auto");
 	$('#site-body').css("height", "auto");
@@ -87,7 +87,6 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 	password = '';
 	$(window).scrollTop(0);
 	if(section == '0'){ //home
-		$(window).scrollTop(0);
 		$('#site-body').html(homePage+abtmePage);
 	} else if(section == '1'){ //about me
 		$('#site-body').html(homePage+abtmePage);
