@@ -20,21 +20,23 @@
 	</head>
 	<body>
 		<div id="full-site" class="container-fluid">
+
+			<div class="side-nav">
+				<div class="side-nav-btn" data-id="0">HOME</div>
+				<div class="side-nav-btn" data-id="1">ABOUT ME</div>
+				<div class="side-nav-btn" data-id="2">MY SERVICES</div>
+				<div class="side-nav-btn" data-id="4">NUTRITION</div>
+				<div class="side-nav-btn" data-id="5">CONTACT</div>
+				<div class="side-nav-btn" data-id="3">FREE CONSULTATION</div>
+			</div>
+
 			<div id="header-nav-fixed" class="row">
 				<div class="col-lg-4">
-					<div id="banner-title">
-						<h3 id="name-title">TRAIN WITH <span class="red-text">BLAINE</span></h3>
-						<!-- <h5 id="under-title">Performance & Nutrition</h5> -->
-<!-- 						<h3 id="name-title">T W B</h3>
-						<h5 id="under-title"><span class="white-letter">T</span>rain <span class="white-letter">W</span>ith <span class="white-letter">B</span>laine</h5>			 -->			
+					<div id="banner-title" data-id="0">
+						<h3 id="name-title">TRAIN WITH <span class="red-text">BLAINE</span></h3>		
 					</div>
 				</div>						
 				<div class="col-lg-8">
-					<div id="menu-btn">
-					  <div class="bar1"></div>
-					  <div class="bar2"></div>
-					  <div class="bar3"></div>
-					</div>
 					<div id="banner-btn-container">						
 						<div class="banner-btns" data-id="3">
 							<div id="free-con-text" class="text">FREE CONSULTATION</div> 
@@ -56,9 +58,28 @@
 						</div>
 					</div>					
 				</div>						
-			</div>	
+			</div>
 
-			<div id="site-body-row" class="row"> <!-- NEEDS HEIGHT -->
+			<div id="mobile-nav-fixed" class="row">
+				<div class="col-lg-12">
+					<div id="mobile-menu-row" class="row">
+						<div id="mobile-title-col" class="col-lg-4 col-sm-9 col-xs-9">
+							<div id="banner-title" data-id="0">
+								<h3 id="name-title">TRAIN WITH <span class="red-text">BLAINE</span></h3>		
+							</div>					
+						</div>
+						<div id="mobile-menu-col" class="col-lg-8 col-sm-3 col-xs-3">
+							<div id="menu-btn">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+								<div class="bar3"></div>
+							</div>
+						</div>	
+					</div>
+				</div>						
+			</div>
+
+			<div id="site-body-row" class="row">
 				<div id="site-body" class="col-lg-12">
 				
 					<div id="home-section" class="row section">
@@ -130,7 +151,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 		<script>
 		  // Accepts any class name
-		  var rellax = new Rellax('.rellax');
+		  // var rellax = new Rellax('.rellax');
 		</script>
 		<script src="./injects.js"></script>
 		<script src="./index.js"></script>

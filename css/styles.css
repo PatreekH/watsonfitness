@@ -35,7 +35,7 @@
 			padding-top: 60px;
 		}
 		#site-body-row{
-
+			opacity: 1;
 		}
 		.white-letter{
 			color: white;
@@ -46,9 +46,12 @@
 		#banner-br{
 			display: none;
 		}
+		.side-nav{
+			display: none;
+		}
 
 
-		/*HOME*/
+/*HOME*/
 		#home-section{
 			height: 100%;
 /*			background: url('./img/cover1.jpg') no-repeat;
@@ -67,8 +70,18 @@
 			position: fixed;
 			background-color: #000000;
 		}
+		#mobile-nav-fixed{
+			display: none;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			/*display: none;*/
+			width: 100%;
+			z-index: 5;
+			position: fixed;
+			background-color: #000000;			
+		}			
 		#banner-title{
-			/*text-align: center;*/
+			cursor: pointer;
 		}
 		#name-title{
 			font-family: 'Roboto Condensed', sans-serif;
@@ -451,21 +464,23 @@
 
 /*MENU BARS*/
 		#menu-btn{
+			float: right;
 			color: #ff0000;
-			display: none;
 			cursor: pointer;
 		}
 		.bar1, .bar2, .bar3{
-			width: 35px;
-			height: 5px;
-			background-color: #333;
+			width: 25px;
+			height: 4px;
+			background-color: #ff0000;
 			margin: 6px 0;
 			transition: 0.4s;
 		}
-
+		.bar1{
+			margin-top: 8px;
+		}
 		.change .bar1{
-			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-			transform: rotate(-45deg) translate(-9px, 6px);
+			-webkit-transform: rotate(-45deg) translate(-6.5px, 6px);
+			transform: rotate(-45deg) translate(-6.5px, 6px);
 		}
 
 		.change .bar2{
@@ -475,8 +490,35 @@
 		.change .bar3{
 			-webkit-transform: rotate(45deg) translate(-8px, -8px);
 			transform: rotate(45deg) translate(-8px, -8px);
-		}		
+		}
 
+/*SIDE NAV*/
+		.side-nav {
+			position: fixed;
+			left: -75%;
+			background-color: white;
+			height: 100%;
+			width: 75%;
+			z-index: 1;
+			top: 60;
+			overflow-x: hidden;
+			padding-top: 20px;
+		}
+
+		.side-nav-btn {
+			font-family: 'Oswald', sans-serif;
+			cursor: pointer;
+			font-weight: 700;
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #000000;
+			display: block;
+		}
+
+		.side-nav-btn:hover {
+			color: #ff0000;
+		}
 
 
 /*SPECIAL MEDIAS*/
@@ -520,9 +562,13 @@
 
 @media screen and (max-width: 1140px) {
 
-	#banner-btn-container {
-	    display: none;
+	.text {
+		font-size: 11.75px;
 	}
+	.banner-btns {
+		padding-top: 11px;
+	}	
+
 	#home-sub-banner{
 		font-size: 40px;
 	}
@@ -531,13 +577,20 @@
 	    font-size: 23px;
 	}
 
-	#menu-btn{
-		display: inline-block;
-	}	
-
 }
 
 @media screen and (max-width: 1024px) {
+
+	#site-body-row{
+		opacity: 1;
+	}
+
+	.text {
+		font-size: 11px;
+	}
+	.banner-btns {
+		padding-top: 12px;
+	}	
 
 	#abtme-title {
 	    font-size: 46px;
@@ -550,6 +603,22 @@
 }
 
 @media screen and (max-width: 992px) {
+
+	#header-nav-fixed {
+	    display: none;
+	}
+
+	#mobile-nav-fixed{
+		display: block;
+	}
+
+	.side-nav{
+		display: block;
+	}
+
+	#site-body-row{
+		opacity: 1;
+	}
 
 	.sched-btn{	
 		margin-left: auto;
@@ -601,6 +670,17 @@
 		padding: 0px 25px 0px 25px;
 	}	
 
+	#consult-title{
+    	font-size: 49px;
+		padding-left: 9.6%;
+	}
+	#consult-pic{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 80%;
+		margin-bottom: 25px;
+	}
 
 }
 
@@ -621,7 +701,11 @@
 	#nut-pic-2{
 		width: 65%;
 	}
-
+ 
+ 	#consult-title{
+    	font-size: 49px;
+		padding-left: 9.6%;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -636,9 +720,36 @@
 	#ptraining-btn{
 		font-size: 17px;
 	}
+
+	#mobile-title-col{
+		width: 75%;
+	}
+	#mobile-menu-col{
+		width: 25%;
+	}
+
+	#consult-title{
+    	font-size: 37px;
+	}	
+
 }
 
+/*@media screen and (max-width: 580px) {
+
+	#mobile-title-col{
+		width: 75%;
+	}
+	#mobile-menu-col{
+		width: 25%;
+	}	
+
+}*/
+
 @media screen and (max-width: 480px) {
+
+	#home-parallax{
+		background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('./img/watty-07.jpg');
+	}
 
 	#abtme-title{
 	    font-size: 45px;
@@ -663,9 +774,24 @@
 		margin-right: 32px;
 	}
 
+	#consult-title {
+    	padding-left: 9%;
+    	font-size: 26px;
+	}
 
 	#footer-consult-btn{
 		font-size: 21px;
+	}
+
+}
+
+@media screen and (max-width: 350px) {
+
+	#mobile-title-col{
+		width: 90%;
+	}
+	#mobile-menu-col{
+		width: 10%;
 	}
 
 }

@@ -526,7 +526,7 @@ var consultPage = '<div id="consult-section" class="row section" data-aos="fade-
 '									<img id="consult-pic" src="./css/img/consult-pic.jpg">'+
 '								</div>'+
 '								<div class="col-lg-6">'+
-'									<p id="consult-paragraph">Everyone gets a free consultation with me at Fitness CF or facility of your choice. <br><br> We will discuss your goals in depth, go over your medical history to see if there is anything we need to be careful with, and develop a plan best suited for your goals in the time frame that you are looking for <br><br><br><br> Sign Up for your FREE CONSULTATION.</p>'+
+'									<p id="consult-paragraph">Everyone gets a free consultation with me at Fitness CF or facility of your choice. <br><br> We will discuss your goals in depth, go over your medical history to see if there is anything we need to be careful with, and develop a plan best suited for your goals in the time frame that you are looking for <br><br> Sign Up for your FREE consultation.</p>'+
 '								</div>'+
 '							</div>'+
 '						</div>'+
