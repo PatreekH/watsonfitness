@@ -464,7 +464,7 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '						</div>'+
 '						<div class="row">'+
 '							<div class="col-lg-12">'+
-'								<button id="submit-btn" class="btn btn-light">Submit</button>'+
+'								<button id="submit-btn" class="btn btn-danger">Submit</button>'+
 '							</div>'+
 '						</div>'+
 '					</form>'+
@@ -552,7 +552,7 @@ var nutPage = '<div id="nut-section" class="row section">'+
 '									<img id="nut-pic" src="./css/img/nut-pic.jpg">'+
 '								</div>'+
 '								<div class="col-lg-6">'+
-'									<div id="nut-paragraph"><p id="nut-p-1">The food that we eat day to day does more then just give us fuel for our bodies, it plays a major role on how we look and feel.</p> While exercising plays Not only will I teach you about what foods to eat I will teach you what times of the day are best to eat certain foods. With that being said everyone&rsquo;s body is different so it is very important to have a failed in game plan when it comes to diet.</div>'+
+'									<div id="nut-paragraph"><p id="nut-p-1">The food that we eat day to day does more then just give us fuel for our bodies, it plays a major role on how we look and feel.</p> While exercising plays an important role, diet and nutrition are key to great health. Not only will I teach you about what foods to eat I will also teach you what times of the day are best to eat certain foods. With that being said everyone&#39;s body is different so it is very important to have a failed in game plan when it comes to diet.</div>'+
 '									<br>'+
 '									<button type="button" class="btn btn-warning sched-btn">SCHEDULE FREE NUTRITIONAL CONSULTATION</button>'+
 '								</div>'+

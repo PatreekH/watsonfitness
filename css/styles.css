@@ -49,6 +49,9 @@
 		.side-nav{
 			display: none;
 		}
+		#submit-btn{
+			color: white;
+		}
 
 
 /*HOME*/
@@ -382,7 +385,7 @@
 			width: 100%;
 		}
 		#email-title{
-			height: 25%;
+			/*height: 25%;*/
 		}
 		#email-input{
 			width: 100%;
@@ -681,6 +684,9 @@
 		width: 80%;
 		margin-bottom: 25px;
 	}
+	#lastname-input {
+	    margin-top: 5px;	
+	}
 
 }
 
@@ -749,6 +755,9 @@
 
 	#home-parallax{
 		background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('./img/watty-07.jpg');
+   		background-size: 100% 100%;		
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	#abtme-title{
@@ -777,6 +786,14 @@
 	#consult-title {
     	padding-left: 9%;
     	font-size: 26px;
+	}
+
+	#meetup-address {
+	    width: 100%; 
+	}
+
+	#submit-btn{
+		width: 100%
 	}
 
 	#footer-consult-btn{

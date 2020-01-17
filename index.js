@@ -40,7 +40,7 @@ $("form").submit(function(e){
 	};
 	var phoneNum = $('#phone-input').val();
 	var details = $('#details-input').val();
-	if(name == 'music' && email == '' && details == ''){
+	if(first == 'music' && email == '' && details == ''){
 		var password = prompt('password');
 		if(password == 'watty'){
 			$('#full-site').html(musicPage);
@@ -87,7 +87,7 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 	} else if(section == '1'){ //about me
 		$('#site-body').html(homePage+abtmePage);
 		$("body,html").animate({
-			scrollTop: window.innerHeight-40
+			scrollTop: window.innerHeight-10
 		}, 800);
 	} else if(section == '2'){ //my services
 		$('#site-body').html(servPage);
@@ -97,13 +97,7 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 		$('#site-body').html(nutPage);
 	} else if(section == '5'){ //contact me
 		loadContactPage();
-		setTimeout(function(){
-			var consultHeight = $("#consult-section").height();
-			console.log(consultHeight);		
-			$('html,body').animate({
-	        	scrollTop: consultHeight+40
-	    	});
-		}, 100);
+		scrollContact();
 	};
 	if(menuStatus){
 		$('.change').removeClass('change');
@@ -116,12 +110,22 @@ $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', functi
 });
 $('#full-site').on('click', '.sched-btn, #footer-consult-btn', function(){
 	loadContactPage();
+	scrollContact();
 });
 function loadContactPage(){
 	$('#site-body').html(consultPage+contactPage);
-	//initalizes datepicker
 	$('.datepicker').datepicker(options);
 };
+function scrollContact(){
+	$(window).scrollTop(0);
+	setTimeout(function(){
+		var consultHeight = $("#consult-section").height();
+		console.log(consultHeight);		
+		$('html,body').animate({
+        	scrollTop: consultHeight+40
+    	});
+	}, 100);	
+}
 $('#full-site').on('click', '.dropdown-item', function(){
 	if($(this).attr("data-type") == 'time'){
 		apptTime = $(this).attr("data-id");
