@@ -16,7 +16,7 @@
 			color: white;
 		}
 		.red-text{
-			color: red;
+			color: #b4ab0a;
 		}
 		#banner-br{
 			display: none;
@@ -24,13 +24,15 @@
 		.side-nav{
 			display: none;
 		}
-		#submit-btn{
-			color: white;
-		}
 
 /*HOME*/
 		#home-section{
-			height: 100%;			
+			/*height: 100%;*/			
+		}
+		#marcus-logo{
+			border-radius: 70%;
+			height: 250;
+			width: 250;
 		}
 		#header-nav{
 			background-color: #000000;
@@ -82,7 +84,7 @@
 		}
 		#home-parallax{
 			/* The image used */
-			background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('./img/watty-03.jpg');
+			background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('./img/watty-20.jpg');
 
 			background-repeat: no-repeat;
 			background-size: 100% 114%;
@@ -91,7 +93,8 @@
 		}
 		#home-banner-name{
 			letter-spacing: 22px;
-			margin-bottom: 40px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 		#home-sub-banner{
 			padding-bottom: 50px;
@@ -105,21 +108,28 @@
 		    font-style: normal;
 		    font-size: 50px;
 		    letter-spacing: 0em;
-			margin-top: 15%;	/*DONT USE % HERE	*/
+			margin-top: 7.5%;	/* DONT USE % HERE */
 		}
 		.free-con-btn{
 			padding-right: 25px;
 			padding-left: 25px;
 			/*font-size: 20px;*/
-			background-color: #ff0000;
+			background-color: #b4ab0a;
+			border-color: #b4ab0a;
 			color: #ffffff;
 			cursor: pointer;
 		}
+		.free-con-btn:hover{
+			border-color: #b4ab0a;
+			background-color: #ffffff;
+			color: #b4ab0a;
+		}
 		.sched-btn{	
 			font-weight: 700;
+			background-color: #b4ab0a;
 		}
 		#free-con-text{
-			color: #ff0000;
+			color: #b4ab0a;
 		}
 
 		.banner-btns{
@@ -142,19 +152,19 @@
 			text-align: center;
 		    font-family: sans-serif;
 		    font-size: 14px;
-		    border: solid 0px #ff0000;
+		    border: solid 0px #b4ab0a;
 		    transition: border-width 0.1s linear;
 		    color: #ffffff;
 		    position: relative;
 		}
 
 		#nut-banner-btn:hover{
-			border-color: #e0a800;
+			border-color: #b4ab0a;
 			border-left-width: 1.5px;	
 		}		
 
 		.text:hover { 
-			border-color: #ff0000;
+			border-color: #b4ab0a;
 			border-left-width: 1.5px;
 		}
 
@@ -168,7 +178,7 @@
 		}	
 
 		.banner-btn3{
-			color: #ff0000;
+			color: #b4ab0a;
 		}
 		.banner-btn3:hover{
 			color: #ffffff;
@@ -216,7 +226,7 @@
 			padding-top: 25px;
 		}
 		.pt-1{
-			color: #ff0000;
+			color: #b4ab0a;
 		}
 		#pt-paralax{
 			color: #ffffff;
@@ -243,7 +253,7 @@
 		}
 		.ptraining-feat::before{
 			content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-			color: red; /* Change the color */
+			color: #b4ab0a; /* Change the color */
 			font-weight: bold; /* If you want it to be bold */
 			display: inline-block; /* Needed to add space between the bullet and the text */
 			width: 1em; /* Also needed for space (tweak if needed) */
@@ -324,6 +334,15 @@
 		}
 
 /*CONTACT*/
+		.main-btn{
+			background-color: #b4ab0a;
+			color: black;
+		}
+		.main-btn:hover{
+			background-color: white;
+			color: #b4ab0a;
+		}
+
 		#contact-section{
 			color: #000000;
 			padding-bottom: 60px;
@@ -425,7 +444,7 @@
 		}
 		#footer-consult-btn{
 			cursor: pointer;
-			color: #ff0000;
+			color: #b4ab0a;
 			margin: 20px;
 			margin-top: 30px;
 			letter-spacing: 2px;
@@ -437,13 +456,13 @@
 /*MENU BARS*/
 		#menu-btn{
 			float: right;
-			color: #ff0000;
+			color: #b4ab0a;
 			cursor: pointer;
 		}
 		.bar1, .bar2, .bar3{
 			width: 25px;
 			height: 4px;
-			background-color: #ff0000;
+			background-color: #b4ab0a;
 			margin: 6px 0;
 			transition: 0.4s;
 		}
@@ -489,7 +508,7 @@
 		}
 
 		.side-nav-btn:hover {
-			color: #ff0000;
+			color: #b4ab0a;
 		}
 
 /*MUSIC*/
@@ -505,7 +524,7 @@
 		}
 		#music-banner{
 			height: 60px;
-			color: red;
+			color: #b4ab0a;
 			background-color: black;
 			font-weight: 700;
 		}
@@ -522,7 +541,7 @@
 		#music-content p{
 			margin-bottom: 0px;
 			margin-top: 20px;
-			color: red;
+			color: #b4ab0a;
 			font-weight: 700;
 			letter-spacing: 5px;
 		}
@@ -645,6 +664,11 @@
 	    font-size: 60px;
 	}
 
+	#consult-paragraph{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
 	#ptraining-img {
 		height: auto;
 	}
@@ -747,6 +771,10 @@
 }
 
 @media screen and (max-width: 480px) {
+
+	#marcus-logo {
+		display: none;
+	}
 
 	#home-parallax{
 		background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('./img/watty-07.jpg');

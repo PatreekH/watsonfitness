@@ -82,7 +82,7 @@ var freeConsultSelected = '		<div class="row">'+
 '										<div class="form-group dropdown-group">'+
 '											<label id="time-title" for="time">TIME:</label>'+
 '											<div class="dropdown dropright">'+
-'												<button id="time-label" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">'+
+'												<button id="time-label" type="button" class="btn main-btn dropdown-toggle" data-toggle="dropdown">'+
 '													7:00am'+
 '												</button>'+
 '												<div id="time-dropdown" class="dropdown-menu">'+
@@ -158,7 +158,7 @@ var scheduleSelected = '		<div class="row">'+
 '										<div class="form-group dropdown-group">'+
 '											<label id="time-title" for="time">TIME:</label>'+
 '											<div class="dropdown dropright">'+
-'												<button id="time-label" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">'+
+'												<button id="time-label" type="button" class="btn main-btn dropdown-toggle" data-toggle="dropdown">'+
 '													7:00am'+
 '												</button>'+
 '												<div id="time-dropdown" class="dropdown-menu">'+
@@ -268,20 +268,20 @@ var servPage = '<div id="serv-section" class="row section">'+
 '									<div class="ptraining-feat">Weekly Nutrition/Macro coaching</div><br>'+
 '									<div class="ptraining-feat">Cardio Program (if needed)</div><br>'+
 '									<div class="ptraining-feat">InBody Measurements (monthly or bi-weekly)</div><br>'+
-'									<button id="ptraining-btn" class="btn btn-danger sched-btn free-con-btn">SCHEDULE FREE CONSULTATION</button>'+
+'									<button id="ptraining-btn" class="btn main-btn sched-btn free-con-btn">SCHEDULE FREE CONSULTATION</button>'+
 '								</div>					'+
 '							</div>'+
 '							<div id="ptraining-options-row" class="row">'+
 '								<div class="col-lg-4 services" data-aos="fade-up" data-aos-offset="150">'+
-'									<div class="pt-options-title"><span style="color:red;">1</span> Time per Week</div>'+
+'									<div class="pt-options-title"><span style="color:#b4ab0a;">1</span> Time per Week</div>'+
 '									<div class="pt-options-text">Maintenance frequency for individuals who feel comfortable working out on their own at the facility of their choice to complete the rest of their weekly workouts.</div>'+
 '								</div>'+
 '								<div class="col-lg-4 services" data-aos="fade-up" data-aos-offset="150">'+
-'									<div class="pt-options-title"><span style="color:red;">2</span> Times per Week</div>'+
+'									<div class="pt-options-title"><span style="color:#b4ab0a;">2</span> Times per Week</div>'+
 '									<div class="pt-options-text">Hybrid program in between working out on your own and working out with me. More coaching time as well as enough time to practice on your own.</div>'+
 '								</div>'+
 '								<div class="col-lg-4 services" data-aos="fade-up" data-aos-offset="150">'+
-'									<div class="pt-options-title"><span style="color:red;">Unlimited</span> Training</div>'+
+'									<div class="pt-options-title"><span style="color:#b4ab0a;">Unlimited</span> Training</div>'+
 '									<div class="pt-options-text">The Ultimate lifestyle change. We will jump start your fitness journey by increasing the frequency we see each other and leave no stones un-turned, guaranteeing you the results you\'re looking for.</div>'+
 '								</div>					'+
 '							</div>'+
@@ -307,12 +307,12 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '									<div class="col-lg-6">'+
 '										<div class="form-group">'+
 '											<label for="name">NAME</label>'+
-'											<input id="firstname-input" class="form-control" placeholder="first" type="text" name="firstname" required>'+
+'											<input id="firstname-input" class="form-control" placeholder="First" type="text" name="firstname" required>'+
 '										</div>'+
 '									</div>'+
 '									<div class="col-lg-6">'+
 '										<div class="form-group">'+
-'											<input id="lastname-input" class="form-control" placeholder="last" type="text" name="lastname" required>'+
+'											<input id="lastname-input" class="form-control" placeholder="Last" type="text" name="lastname" required>'+
 '										</div>'+
 '									</div>'+
 '								</div>'+
@@ -322,7 +322,7 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '							<div class="col-lg-12">'+
 '								<div class="form-group">'+
 '									<label id="email-title" for="email">EMAIL</label>'+
-'									<input id="email-input"  class="form-control" placeholder="email@email.com" type="email" name="email" required>'+
+'									<input id="email-input"  class="form-control" placeholder="Email@email.com" type="email" name="email" required>'+
 '								</div>'+
 '							</div>'+
 '						</div>'+
@@ -331,7 +331,7 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '								<div class="form-group dropdown-group">'+
 '									<label id="reason-title" for="reason">REASON:</label>'+
 '									<div class="dropdown dropright">'+
-'										<button id="reason-label" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">'+
+'										<button id="reason-label" type="button" class="btn main-btn dropdown-toggle" data-toggle="dropdown">'+
 '											Free Consultation'+
 '										</button>'+
 '										<div class="dropdown-menu">'+
@@ -375,7 +375,7 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '										<div class="form-group dropdown-group">'+
 '											<label id="time-title" for="time">TIME:</label>'+
 '											<div class="dropdown dropright">'+
-'												<button id="time-label" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">'+
+'												<button id="time-label" type="button" class="btn main-btn dropdown-toggle" data-toggle="dropdown">'+
 '													7:00am'+
 '												</button>'+
 '												<div id="time-dropdown" class="dropdown-menu">'+
@@ -456,7 +456,7 @@ var contactPage = '<div id="contact-section" class="row section">'+
 '						</div>'+
 '						<div class="row">'+
 '							<div class="col-lg-12">'+
-'								<button id="submit-btn" class="btn btn-danger">Submit</button>'+
+'								<button id="submit-btn" class="btn main-btn">Submit</button>'+
 '							</div>'+
 '						</div>'+
 '					</form>'+
@@ -470,11 +470,12 @@ var homePage =  '<div id="home-section" class="row section">'+
 '							<div id="home-parallax" class="row">'+
 '								<div class="col-lg-1"></div>'+
 '								<div id="home-banner" class="col-lg-10">'+
+'									<img id="marcus-logo" src="./css/img/logo.jpeg" data-aos="fade-up" data-aos-offset="150">'+
 '									<div id="home-banner-name">'+
 '										<span class="music-btn" data-id="m">M</span>AR<span class="music-btn" data-id="c">C</span><span class="music-btn" data-id="u">U</span><span class="music-btn" data-id="s">S</span> BLA<span class="music-btn" data-id="i">I</span>NE'+
 '									</div>'+
 '									<div id="home-sub-banner">PERSONAL TRAINER <span class="red-text">&</span><br id="banner-br"> NUTRITIONAL COACHING</div>'+
-'									<button class="btn btn-danger sched-btn free-con-btn">SCHEDULE FREE CONSULTATION</button>'+
+'									<button class="btn main-btn sched-btn free-con-btn">SCHEDULE FREE CONSULTATION</button>'+
 '								</div>'+
 '								<div class="col-lg-1"></div>'+
 '							</div>'+
@@ -491,11 +492,12 @@ var abtmePage = '<div id="abtme-section" class="row section">'+
 '											<h1 id="abtme-title">ABOUT ME</h1>'+
 '											<img id="abtme-img" class="imgs" src="./css/img/watty-02.png">'+
 '										</div>'+
-'										<div id="abtme-text-col" class="col-lg-8" data-aos="fade-up" data-aos-offset="350">'+
-'											<p id="abtme-text">I believe that everyone deserves to look and feel how they want. Unfortunately not everyone has the correct knowledge or motivation needed to see those results. I will not let you be one of these people. I will give you the proper knowledge and push you until you are satisfied with how you feel and or look. My goal is to help as many people as possible feel that satisfaction of be coming the best versions of themselves. This journey will not be easy but with my help we will get you to where you need to be. Stop putting other things in your life before your health. At the end of the day our health is all we have.</p>'+
-'											<br>'+
-'											<div id="abtme-sendoff">Marcus Blaine</div>'+
-'										</div>'+
+'                                       <div id="abtme-text-col" class="col-lg-8" data-aos="fade-up" data-aos-offset="350">'+
+'											<p id="abtme-text">I believe that everyone deserves to look and feel how they want. Unfortunately, not everyone has the correct knowledge or motivation needed to see those results. I will not let you be one of these people. I will give you the proper knowledge and push you until you are satisfied with how you feel and/or look. My goal is to help as many people as possible feel that satisfaction of be coming the best versions of themselves. This journey will not be easy, but with my help we will get you to where you need to be. Stop putting other things in your life before your health. At the end of the day, our health is all we have!</p>'+
+'												<br>'+
+'												<div id="abtme-sendoff">Marcus Blaine</div>'+
+'											</div>'+
+'                                       </div>'+
 '									</div>'+
 '								</div>'+
 '								<div class="col-lg-1"></div>'+
@@ -515,7 +517,7 @@ var consultPage = '<div id="consult-section" class="row section" data-aos="fade-
 '							</div>'+
 '							<div class="row">'+
 '								<div class="col-lg-6">'+
-'									<img id="consult-pic" src="./css/img/consult-pic.jpg">'+
+'									<img id="consult-pic" src="./css/img/watty-21.png">'+
 '								</div>'+
 '								<div class="col-lg-6">'+
 '									<p id="consult-paragraph">Everyone gets a free consultation with me at Fitness CF or facility of your choice. <br><br> We will discuss your goals in depth, go over your medical history to see if there is anything we need to be careful with, and develop a plan best suited for your goals in the time frame that you are looking for <br><br> Sign Up for your FREE consultation.</p>'+
@@ -544,9 +546,9 @@ var nutPage = '<div id="nut-section" class="row section">'+
 '									<img id="nut-pic" src="./css/img/nut-pic.jpg">'+
 '								</div>'+
 '								<div class="col-lg-6">'+
-'									<div id="nut-paragraph"><p id="nut-p-1">The food that we eat day to day does more then just give us fuel for our bodies, it plays a major role on how we look and feel.</p> While exercising plays an important role, diet and nutrition are key to great health. Not only will I teach you about what foods to eat I will also teach you what times of the day are best to eat certain foods. With that being said everyone&#39;s body is different so it is very important to have a failed in game plan when it comes to diet.</div>'+
+'									<div id="nut-paragraph"><p id="nut-p-1">The food that we eat day to day does more than just give us fuel for our bodies. It plays a major role on how we look and feel.</p> While exercising plays an important role, diet and nutrition are key to great health. Not only will I teach you about what foods to eat, I will also teach you what times of the day are best to eat certain foods. With that being said, everyone&#39;s body is different so it is very important to have a game plan when it comes to diet.</div>'+
 '									<br>'+
-'									<button type="button" class="btn btn-warning sched-btn">SCHEDULE FREE NUTRITIONAL CONSULTATION</button>'+
+'									<button type="button" class="btn main-btn sched-btn">SCHEDULE FREE NUTRITIONAL CONSULTATION</button>'+
 '								</div>'+
 '								<div id="nut-pic-1" class="col-lg-6">'+
 '									<img id="nut-pic" src="./css/img/nut-pic.jpg">'+

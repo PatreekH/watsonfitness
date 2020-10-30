@@ -39,8 +39,8 @@ $('#full-site').on('click', '#return-site-btn', function(){
 	$('#site-body').html(homePage+abtmePage);
 	$('#home-parallax').css('height',  window.innerHeight-60);
 });
-$("form").submit(function(e){
-	e.preventDefault();
+
+$('#full-site').on('click', "#submit-btn", function(){
 	var first = $('#firstname-input').val();
 	var last = $('#lastname-input').val();
 	var email = $('#email-input').val();
@@ -54,15 +54,13 @@ $("form").submit(function(e){
 	};
 	var phoneNum = $('#phone-input').val();
 	var details = $('#details-input').val();
-
-
-	//create validation
 	var contactForm = {
 		first: first,
 		last: last,
 		email: email,
 		reason: contactReason,
 		methOfContact: methOfContact,
+		apptDate: date,
 		apptTime: apptTime,
 		apptLocation: apptLocation,
 		apptAddress: apptAddress,
@@ -72,15 +70,24 @@ $("form").submit(function(e){
 
 	console.log(contactForm);
 
-	// *require things here, alert if empty
+	$.ajax({
 
-	// ajax call
+        method: 'POST',
+    	dataType: 'json',
 
-	// loading screen while awaiting response
+        url: '/send-form',
 
-	//refresh page after submission?
+	    data: { 
+	        'formData': contactForm
+	    },
 
+	    success: function(response){
+        	alert('Form Sent! You will be contacted shortly!');
+        	location.reload();
+        }
 
+	});
+	return false;
 });
 $('#full-site').on('click', '.banner-btns, .side-nav-btn, #banner-title', function(){
 	var section = parseInt($(this).attr("data-id"));
@@ -149,8 +156,12 @@ $('#full-site').on('click', '.dropdown-item', function(){
 	    	$('#reason-label').html('Schedule Workout');
 	    	$('#extra-space1').html(scheduleSelected);
 	    } else {
-	    	methOfContact = 'Over Phone';
+	    	methOfContact = ' ';
 	    	contactReason = 'Other';
+			apptDate = ' ';
+			apptTime = ' ';
+			apptLocation = ' ';
+			apptAddress = ' ';	    	
 	    	$('#phone-label').addClass('phone-spacing');
 	    	$('#reason-label').html('Other');
 	        $('#extra-space1').empty();

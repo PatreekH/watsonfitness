@@ -8,24 +8,6 @@
 // Database Setup
 // =============================================================
 	var mysql = require('mysql');
-
-	// var con = mysql.createConnection({
-	//   host: "localhost",
-	//   user: "root",
-	//   password: "newave",
-	//   database: "address_data"
-	// });
-
-	// var addyLatLongs = [];
-
-	// con.connect(function(err) {
-	// 	if (err) throw err;
-	// 	console.log("Database Connected!");
-	// 	con.query("SELECT * FROM address", function (err, result, fields) {
-	// 		if (err) throw err;
-	// 		// console.log(addyLatLongs);
-	// 	});
-	// });
 // =============================================================
 
 // Express App Setup and Index Path
@@ -47,11 +29,13 @@
 
 // Routes
 // =============================================================
-	app.get('/get-all-data', function(req, res){
+	app.post('/send-form', function(req, res){
 
-		//store data in database
+		var formData = req.body['formData'];
 
-		//send msg
+		sendMsg(formData);
+
+		res.end('{"success" : "Updated Successfully", "status" : 200}');
 
 	});
 // =============================================================
@@ -59,23 +43,23 @@
 // Twilio
 // =============================================================
 
-
-
 var Twilio = require('twilio');
 
-var accountSid = 'ACb8b154266a476a47016f0d5c66403123';
-var token = '55b1feea705a213d70ac4f0b9a36580a';
+var accountSid = 'AC9dc753dd9f3825a9702a160d4d17722a';
+var token = 'e76cdb44be679c2ca69a04901fe7b032';
 
 var twilio = new Twilio(accountSid, token);
 
-function sendMsg(){
+function sendMsg(data){
+
+	console.log(data);
 
 
 	twilio.messages.create({
-	  from: '+14243724246',
+	  from: '+12029337071',
 	  to: '+14077174398',
 	  // to: '+13212783762',
-	  body: '>>>Train With Blaine<<< \n\n NEW MESSAGE \n\n name: patrick \n\n email: patty@hotmail.com \n\n reason: Free Consultation \n\n appt date: 12/14/2019 \n\n appt time: 1:00pm \n\n phone #: 407-717-4398 \n\n details: \n "Testing to see if this works"'
+	  body: '>>>Train With Blaine<<< \n\n NEW FORM SUBMISSION \n\n name: '+data.first+' '+data.last+' \n\n email: '+data.email+' \n\n reason: '+data.reason+' \n\n appt date:'+data.apptDate+' \n\n appt time: '+data.apptTime+' \n\n appt location: '+data.apptLocation+' \n\n appt address: '+data.apptAddress+' \n\n prefered method of contact: '+data.methOfContact+' \n\n phone #: '+data.phoneNum+' \n\n details: \n '+data.details+''
 	}, function(err, result) {
 		if(err){ console.log(err); } else {
 		  console.log('Created message using callback');
@@ -84,11 +68,7 @@ function sendMsg(){
 		};
 	});
 
-
-
 };
-
-// sendMsg();
 
 
 
